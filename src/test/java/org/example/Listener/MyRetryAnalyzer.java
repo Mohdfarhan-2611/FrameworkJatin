@@ -15,8 +15,8 @@ public class MyRetryAnalyzer implements IRetryAnalyzer {
 
     static {
         try {
-            MAX_NUMBER_OF_ATTEMPTS = Integer.parseInt(readkey("MAX_NUMBER_OF_ATTEMPTS"));
-            Current_number_of_attemps= Integer.parseInt(readkey("Current_number_of_attemps"));
+            MAX_NUMBER_OF_ATTEMPTS = Integer.parseInt(PropertiesUtils.readkey("MAX_NUMBER_OF_ATTEMPTS"));
+            Current_number_of_attemps= Integer.parseInt(PropertiesUtils.readkey("Current_number_of_attemps"));
 
         } catch (IOException e) {
             throw new RuntimeException(e);
