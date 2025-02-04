@@ -1,11 +1,14 @@
 package org.example.Base;
 
+import org.apache.logging.log4j.Logger;
 import org.example.Constant.Browser;
 import org.example.Driver.DriverManager;
+import org.example.Utils.LoggerUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public abstract class BasePage {
+    Logger logger = LoggerUtility.getLogger(this.getClass());
 
     public BasePage() {}
 
