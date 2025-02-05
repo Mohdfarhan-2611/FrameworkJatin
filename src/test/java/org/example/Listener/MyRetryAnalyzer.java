@@ -11,12 +11,11 @@ import static org.example.Utils.PropertiesUtils.readkey;
 public class MyRetryAnalyzer implements IRetryAnalyzer {
 
     private static final int MAX_NUMBER_OF_ATTEMPTS;
-    private static int Current_number_of_attemps;
+    private int Current_number_of_attemps=0;
 
     static {
         try {
             MAX_NUMBER_OF_ATTEMPTS = Integer.parseInt(PropertiesUtils.readkey("MAX_NUMBER_OF_ATTEMPTS"));
-            Current_number_of_attemps= Integer.parseInt(PropertiesUtils.readkey("Current_number_of_attemps"));
 
         } catch (IOException e) {
             throw new RuntimeException(e);

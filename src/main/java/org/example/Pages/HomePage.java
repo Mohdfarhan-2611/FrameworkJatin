@@ -5,6 +5,7 @@ import org.example.Base.BasePage;
 import org.example.Constant.Browser;
 import static org.example.Constant.Env.*;
 import org.example.Driver.DriverManager;
+import org.example.Driver.DriverManagerTL;
 import org.example.Utils.LoggerUtility;
 import org.example.Utils.PropertiesUtils;
 import org.openqa.selenium.By;
@@ -24,7 +25,7 @@ public final class HomePage extends BasePage {
     public LoginPage ClickSignIn() throws IOException {
 
         logger.info("Get the URL");
-        DriverManager.getDriver().get(PropertiesUtils.readkey("url"));
+        DriverManagerTL.getDriver().get(PropertiesUtils.readkey("url"));
 
         logger.info("Click on Signin");
         ClickElement(SIGN_IN_LOCATOR);
