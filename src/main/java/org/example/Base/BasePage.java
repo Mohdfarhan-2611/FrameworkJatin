@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 public abstract class BasePage {
     Logger logger = LoggerUtility.getLogger(this.getClass());
 
-    public BasePage() {}
+    protected BasePage() {}
 
     public static void MaximizeWindow()
     {
