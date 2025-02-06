@@ -47,7 +47,7 @@ public abstract class DriverManager extends BasePage {
                         } else {
                             edgeOptions.addArguments("--start-maximized");
                         }
-
+                        logger.info("Launch the edge browser");
                         DriverManagerTL.setDriver(new EdgeDriver(edgeOptions));
                         DriverManagerTL.getDriver().get(PropertiesUtils.readkey("url"));
                         break;
@@ -63,6 +63,7 @@ public abstract class DriverManager extends BasePage {
                             chromeOptions.addArguments("--start-maximized");
                         }
 
+                        logger.info("Launch the chrome browser");
                         DriverManagerTL.setDriver(new ChromeDriver(chromeOptions));
                         DriverManagerTL.getDriver().get(PropertiesUtils.readkey("url"));
                         break;
@@ -77,7 +78,7 @@ public abstract class DriverManager extends BasePage {
                         } else {
                             firefoxOptions.addArguments("--start-maximized");
                         }
-
+                        logger.info("Launch the firefox browser");
                         DriverManagerTL.setDriver(new FirefoxDriver(firefoxOptions));
                         DriverManagerTL.getDriver().get(PropertiesUtils.readkey("url"));
                         break;

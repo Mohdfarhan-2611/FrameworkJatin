@@ -1,8 +1,8 @@
-package org.example.Test;
+package org.example.Test.AutomationPractice.pl;
 
 import org.example.Base.BaseTest;
 import org.example.POJO.User;
-import org.example.Pages.HomePage;
+import org.example.Pages.AutomationPractice.pl.HomePage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 

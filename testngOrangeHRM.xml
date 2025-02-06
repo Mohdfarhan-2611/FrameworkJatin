@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/mhdfa/IdeaProjects/FrameworkJatin">
+        <classes>
+            <class name="org.example.Test.OrangeHRM.LoginTest_HRM">
+                <methods>
+                    <include name="validLogin"/>
+                    <include name="invalidLogin"/>
+                </methods>
+            </class>
+            <class name="org.example.Test.OrangeHRM.PIMTest">
+                <methods>
+                    <include name="ClickEmployeeListOption"/>
+                    <include name="ScrollDownInTheEnd"/>
+                    <include name="clickonSecondCarousel"/>
+                    <include name="searchEmployeewithValidusername"/>
+                    <include name="searchEmployeewithInvalidusername"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

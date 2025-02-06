@@ -1,10 +1,9 @@
-package org.example.Pages;
+package org.example.Pages.AutomationPractice.pl;
 
 import org.apache.logging.log4j.Logger;
 import org.example.Base.BasePage;
-import org.example.Constant.Browser;
-import static org.example.Constant.Env.*;
-import org.example.Driver.DriverManager;
+
+import org.example.Constant.WaitStrategy;
 import org.example.Driver.DriverManagerTL;
 import org.example.Utils.LoggerUtility;
 import org.example.Utils.PropertiesUtils;
@@ -28,7 +27,7 @@ public final class HomePage extends BasePage {
         DriverManagerTL.getDriver().get(PropertiesUtils.readkey("url"));
 
         logger.info("Click on Signin");
-        ClickElement(SIGN_IN_LOCATOR);
+        ClickElement(SIGN_IN_LOCATOR, WaitStrategy.PRESENT);
         LoginPage loginPage = new LoginPage();
         return loginPage;
     }

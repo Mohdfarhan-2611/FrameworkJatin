@@ -1,7 +1,8 @@
-package org.example.Pages;
+package org.example.Pages.AutomationPractice.pl;
 
 import org.apache.logging.log4j.Logger;
 import org.example.Base.BasePage;
+import org.example.Constant.WaitStrategy;
 import org.example.Utils.LoggerUtility;
 import org.openqa.selenium.By;
 
@@ -28,21 +29,21 @@ public final class LoginPage extends BasePage {
     public LoginPage enterEmail(String email)
     {
         logger.info("Enter email address");
-        EnterText(EMAL_TEXTBOX_LOCATOR, email);
+        EnterText(EMAL_TEXTBOX_LOCATOR, email, WaitStrategy.CLICKABLE);
         return this;
     }
 
     public LoginPage enterPassword(String pass)
     {
         logger.info("Enter Password");
-        EnterText(PASS_TEXTBOX_LOCATOR, pass);
+        EnterText(PASS_TEXTBOX_LOCATOR, pass, WaitStrategy.CLICKABLE);
         return this;
     }
 
     public MyAccountPage clicklogin()
     {
         logger.info("Click on sign in");
-        ClickElement(lOGIN_BUTTON_LOCATOR);
+        ClickElement(lOGIN_BUTTON_LOCATOR, WaitStrategy.CLICKABLE);
         MyAccountPage myAccountPage = new MyAccountPage();
         return myAccountPage;
     }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" thread-count="8" parallel="methods">
-    <test verbose="2" preserve-order="true" name="C:/Users/mhdfa/IdeaProjects/FrameworkJatin">
+    <test verbose="2" preserve-order="true" name="Login Tests">
         <classes>
-            <class name="org.example.Test.LoginTest2">
+            <class name="org.example.Test.AutomationPractice.pl.LoginTest2">
                 <methods>
                     <include name="Login1"/>
                     <include name="Login2"/>

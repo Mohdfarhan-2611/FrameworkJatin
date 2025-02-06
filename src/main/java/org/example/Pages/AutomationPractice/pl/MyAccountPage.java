@@ -1,7 +1,8 @@
-package org.example.Pages;
+package org.example.Pages.AutomationPractice.pl;
 
 import org.apache.logging.log4j.Logger;
 import org.example.Base.BasePage;
+import org.example.Constant.WaitStrategy;
 import org.example.Utils.LoggerUtility;
 import org.openqa.selenium.By;
 
@@ -16,7 +17,7 @@ public final class MyAccountPage extends BasePage {
     public String getusername()
     {
         logger.info("get the signin user info");
-        return getVisiblText(USER_INFO);
+        return getVisiblText(USER_INFO, WaitStrategy.VISIBLE);
     }
 
 
