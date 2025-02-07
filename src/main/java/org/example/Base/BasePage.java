@@ -4,6 +4,7 @@ import org.apache.logging.log4j.Logger;
 import org.example.Constant.WaitStrategy;
 import org.example.Driver.DriverManagerTL;
 import org.example.Utils.LoggerUtility;
+import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -49,11 +50,28 @@ public abstract class BasePage {
         js.executeScript("arguments[0].scrollIntoView(true);",element);
     }
 
+    public void ScrollToBottom()
+    {
+        JavascriptExecutor js = (JavascriptExecutor) DriverManagerTL.getDriver();
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+    }
+
+
+
     public boolean isEnabled(By locator, WaitStrategy waitStrategy)
     {
         WebElement element =  DriverManagerTL.getDriver().findElement(locator);
         boolean isenable =element.isEnabled();
         return isenable;
+    }
+
+
+    public String getAttribute(By locator, String value, WaitStrategy waitStrategy)
+    {
+        WebElement element = DriverManagerTL.getDriver().findElement(locator);
+        return element.getAttribute(value);
+
     }
 
 
