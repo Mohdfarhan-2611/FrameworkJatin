@@ -2,6 +2,7 @@ package org.example.Driver;
 
 import org.apache.logging.log4j.Logger;
 import org.example.Base.BasePage;
+import org.example.Report.ExtentReport;
 import org.example.Utils.LoggerUtility;
 import org.example.Utils.PropertiesUtils;
 import org.openqa.selenium.chrome.ChromeDriver;

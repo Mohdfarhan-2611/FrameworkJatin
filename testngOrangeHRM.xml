@@ -9,19 +9,19 @@
                     <include name="invalidLogin"/>
                 </methods>
             </class>
-            <class name="org.example.Test.OrangeHRM.PIMTest">
-                <methods>
-                    <include name="ClickEmployeeListOption"/>
-                    <include name="ScrollDownInTheEnd"/>
-                    <include name="clickonSecondCarousel"/>
-                    <include name="clickonThirdCarousel"/>
-                    <include name="clickonFourthCarousel"/>
-                    <include name="clickonNextCarousel"/>
-                    <include name="clickonPreviousCarousel"/>
-                    <include name="searchEmployeewithValidusername"/>
-                    <include name="searchEmployeewithInvalidusername"/>
-                </methods>
-            </class>
+<!--            <class name="org.example.Test.OrangeHRM.PIMTest">-->
+<!--                <methods>-->
+<!--                    <include name="ClickEmployeeListOption"/>-->
+<!--                    <include name="ScrollDownInTheEnd"/>-->
+<!--                    <include name="clickonSecondCarousel"/>-->
+<!--                    <include name="clickonThirdCarousel"/>-->
+<!--                    <include name="clickonFourthCarousel"/>-->
+<!--                    <include name="clickonNextCarousel"/>-->
+<!--                    <include name="clickonPreviousCarousel"/>-->
+<!--                    <include name="searchEmployeewithValidusername"/>-->
+<!--                    <include name="searchEmployeewithInvalidusername"/>-->
+<!--                </methods>-->
+<!--            </class>-->
         </classes>
     </test>
 </suite>

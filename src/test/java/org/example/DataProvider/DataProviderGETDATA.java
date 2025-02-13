@@ -1,9 +1,11 @@
 package org.example.DataProvider;
 
+import org.example.POJO.OrangeHRM.LoginUser;
 import org.example.POJO.User;
 import org.example.Utils.CSVReaderUtility;
 import org.example.Utils.ExcelReaderUtility;
 import org.example.Utils.JSONReaderUtility;
+import org.example.Utils.OrangeHRM.LoginPageReader;
 import org.testng.annotations.DataProvider;
 
 import java.io.FileNotFoundException;
@@ -29,6 +31,17 @@ public class DataProviderGETDATA {
     public static Iterator<User> getLoginDatafromCSV() throws FileNotFoundException {
         return CSVReaderUtility.readDataFromCSV();
     }
+
+
+    @DataProvider(name="ORANGEHRMLOGINDATAFROMCSVFILE")
+    public static Iterator<LoginUser> getOrangeHRMLoginDatafromCSV() throws FileNotFoundException {
+        return LoginPageReader.readDataFromJson();
+    }
+
+
+
+
+
 
 
     @DataProvider(name="LOGINDATAFROMEXCELFILE")
