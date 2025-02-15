@@ -3,7 +3,6 @@ package org.example.Pages.OrangeHRM;
 import org.apache.logging.log4j.Logger;
 import org.example.Base.BasePage;
 import org.example.Constant.WaitStrategy;
-import org.example.Report.ExtentReport;
 import org.example.Utils.LoggerUtility;
 import org.openqa.selenium.By;
 
@@ -30,7 +29,7 @@ public class PIMPage_HRM extends BasePage {
 
         Thread.sleep(2000); // wait for 5 seconds to ensure the page is loaded
         logger.info("Get the PIM Page page text");
-        ExtentReport.getTest().info("Get the PIM Page page text");
+        //ExtentReport.getTest().info("Get the PIM Page page text");
         return getVisiblText(PIM_TEXT_LOCATOR, WaitStrategy.PRESENT);
     }
 
