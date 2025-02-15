@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" thread-count="8" parallel="true">
+    <test verbose="2" preserve-order="true" name="C:/Users/mhdfa/IdeaProjects/FrameworkJatin">
+        <classes>
+            <class name="org.example.Test.OrangeHRM.LoginTest_HRM">
+                <methods>
+                    <include name="validLogin"/>
+                    <include name="invalidLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
