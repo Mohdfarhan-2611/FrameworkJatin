@@ -5,6 +5,10 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 import java.awt.*;
 import java.io.File;
@@ -43,5 +47,18 @@ public final class ExtentReport {
 
     }
 
+    public static String captureScreenshot(WebDriver driver, String screenshotName) {
+        try {
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            File source = ts.getScreenshotAs(OutputType.FILE);
+            String destination = System.getProperty("user.dir") + "/test-output/screenshots/" + screenshotName + ".png";
+            File finalDestination = new File(destination);
+            FileUtils.copyFile(source, finalDestination);
+            return destination;
+        } catch (IOException e) {
+            System.out.println("Failed to capture screenshot: " + e.getMessage());
+            return null;
+        }
 
+    }
 }
