@@ -12,9 +12,6 @@ public class BaseTest {
     protected BaseTest(){};
 
 
-
-
-
     @BeforeMethod
     public static void setup() throws IOException {
        DriverManager.init();

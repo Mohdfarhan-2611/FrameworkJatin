@@ -15,7 +15,7 @@ public class PropertiesUtils {
 
         Properties properties = null;
         try {
-            FileInputStream fileInputStream = new FileInputStream(UAT_PROPERTY_PATH);
+            FileInputStream fileInputStream = new FileInputStream(UAT_PROPERTY_PATH );
             properties = new Properties();
             properties.load(fileInputStream);
             return properties.getProperty(key.toLowerCase());

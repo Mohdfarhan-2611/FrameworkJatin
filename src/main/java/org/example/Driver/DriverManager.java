@@ -41,7 +41,7 @@ public abstract class DriverManager extends BasePage {
                         EdgeOptions edgeOptions = new EdgeOptions();
                         edgeOptions.addArguments("--guest");
                         if (isheadless) {
-                            edgeOptions.addArguments("--headless");
+                            edgeOptions.addArguments("--headless=new");
                             edgeOptions.addArguments("--window-size=1920,1080");
                             edgeOptions.addArguments("--disable-gpu");
                         } else {
@@ -56,7 +56,7 @@ public abstract class DriverManager extends BasePage {
                         ChromeOptions chromeOptions = new ChromeOptions();
                         chromeOptions.addArguments("--guest");
                         if (isheadless) {
-                            chromeOptions.addArguments("--headless");
+                            chromeOptions.addArguments("--headless=new");
                             chromeOptions.addArguments("--window-size=1920,1080");
                             chromeOptions.addArguments("--disable-gpu");
                         } else {
